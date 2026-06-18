@@ -45,10 +45,10 @@ if (phoneInput) {
   });
 }
 
-// Contact form
+// Contact form — Web3Forms
 const form = document.getElementById('contactForm');
 if (form) {
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     // Validate required fields
@@ -63,45 +63,64 @@ if (form) {
     });
     if (!valid) return;
 
-    const name    = form.querySelector('#name').value.trim();
-    const phone   = form.querySelector('#phone').value.trim();
-    const email   = form.querySelector('#email').value.trim();
-    const message = form.querySelector('#message').value.trim();
+    const submitBtn = form.querySelector('button[type=submit]');
+    const errorEl   = document.getElementById('formError');
 
-    // Open mailto synchronously (must be in direct user-gesture handler, before any await)
-    const bodyText = `Имя: ${name}\nТелефон: ${phone}\nEmail: ${email}${message ? '\n\nПроект:\n' + message : ''}`;
-    const subject  = encodeURIComponent(`Заявка с сайта — ${name}`);
-    const body     = encodeURIComponent(bodyText);
-    window.location.href = `mailto:lightstylemeb@yandex.ru?subject=${subject}&body=${body}`;
+    // Loading state
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Отправляем…';
+    errorEl.classList.add('hidden');
 
-    showSuccess();
+    const data = {
+      access_key: form.querySelector('[name=access_key]').value,
+      subject:    form.querySelector('[name=subject]').value,
+      from_name:  form.querySelector('[name=from_name]').value,
+      name:    form.querySelector('#name').value.trim(),
+      phone:   form.querySelector('#phone').value.trim(),
+      email:   form.querySelector('#email').value.trim(),
+      message: form.querySelector('#message').value.trim() || '—',
+    };
+
+    try {
+      const res  = await fetch('https://api.web3forms.com/submit', {
+        method:  'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body:    JSON.stringify(data),
+      });
+      const json = await res.json();
+
+      if (json.success) {
+        showSuccess();
+      } else {
+        throw new Error(json.message || 'error');
+      }
+    } catch (err) {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Отправить заявку';
+      errorEl.classList.remove('hidden');
+      console.error('Form error:', err);
+    }
   });
 }
 
 function showSuccess() {
-  const form = document.getElementById('contactForm');
-  const success = document.getElementById('formSuccess');
+  const form      = document.getElementById('contactForm');
+  const success   = document.getElementById('formSuccess');
+  const submitBtn = form && form.querySelector('button[type=submit]');
   if (!form || !success) return;
 
-  // Clear all input/textarea fields
-  form.querySelectorAll('input:not([type=checkbox]):not([type=submit]), textarea').forEach(el => {
+  form.querySelectorAll('input:not([type=checkbox]):not([type=hidden]), textarea').forEach(el => {
     el.value = '';
     el.classList.remove('error');
   });
   form.querySelector('#privacy').checked = false;
 
-  // Disable submit while showing success
-  const submitBtn = form.querySelector('button[type=submit]');
-  if (submitBtn) submitBtn.disabled = true;
-
+  submitBtn.textContent = 'Отправить заявку';
+  submitBtn.disabled = false;
   success.classList.remove('hidden');
   success.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 
-  // Re-enable after 5 seconds
-  setTimeout(() => {
-    success.classList.add('hidden');
-    if (submitBtn) submitBtn.disabled = false;
-  }, 5000);
+  setTimeout(() => success.classList.add('hidden'), 6000);
 }
 
 // Animate elements on scroll
