@@ -380,6 +380,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   overflow: hidden;
   box-shadow: var(--shadow);
   transition: transform var(--transition), box-shadow var(--transition);
+  display: flex;
+  flex-direction: column;
 }
 .card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
 
@@ -387,6 +389,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   height: 220px;
   background-size: cover;
   background-position: center;
+  flex-shrink: 0;
 }
 
 .card__body {
@@ -394,6 +397,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   display: flex;
   flex-direction: column;
   gap: 10px;
+  flex: 1;
 }
 .card__body h3 {
   font-size: 1.125rem;
@@ -404,6 +408,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   font-size: .9375rem;
   color: var(--gray);
   flex: 1;
+}
+.card__body .btn--sm {
+  margin-top: auto;
+  align-self: flex-start;
 }
 
 .catalog__cta {
@@ -441,9 +449,20 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .adv__icon {
-  font-size: 2.5rem;
-  margin-bottom: 16px;
-  line-height: 1;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(37,99,235,.08);
+  border-radius: 12px;
+  padding: 10px;
+}
+.adv__icon svg {
+  width: 32px;
+  height: 32px;
+  display: block;
 }
 
 .adv__card h3 {
@@ -707,8 +726,17 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   font-size: .8125rem !important;
 }
 
+.footer__disclaimer {
+  border-top: 1px solid rgba(255,255,255,.08);
+  padding: 16px 0;
+  font-size: .8125rem;
+  color: rgba(255,255,255,.35);
+  line-height: 1.6;
+}
+
 .footer__bottom {
-  padding: 24px 0;
+  padding: 20px 0;
+  border-top: 1px solid rgba(255,255,255,.08);
 }
 .footer__bottom .container {
   display: flex;
@@ -723,6 +751,11 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   color: rgba(255,255,255,.4);
 }
 .footer__bottom a:hover { color: rgba(255,255,255,.8); }
+.footer__bottom-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
 
 /* ===== BACK TO TOP ===== */
 .back-top {
@@ -775,6 +808,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .adv__grid { grid-template-columns: 1fr; }
   .catalog__grid { grid-template-columns: 1fr; }
   .footer__bottom .container { flex-direction: column; text-align: center; }
+  .footer__bottom-links { justify-content: center; }
   .back-top { bottom: 20px; right: 20px; }
 }
 
