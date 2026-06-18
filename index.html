@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Лайт Стайл — Корпусная мебель на заказ</title>
+  <meta name="description" content="Лайт Стайл — производство корпусной мебели для детских садов, школ, офисов и дома. Полный цикл от проекта до монтажа по всей России." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header" id="top">
+  <div class="container header__inner">
+    <a href="#top" class="logo">
+      <span class="logo__light">Лайт</span><span class="logo__dark">Стайл</span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="#about">О компании</a>
+      <a href="#catalog">Каталог</a>
+      <a href="#advantages">Преимущества</a>
+      <a href="#process">Этапы</a>
+      <a href="#contact">Контакты</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero__bg">
+    <div class="hero__overlay"></div>
+  </div>
+  <div class="container hero__content">
+    <p class="hero__label">Корпусная мебель на заказ</p>
+    <h1 class="hero__title">Создаём мебель,<br>которой <span>гордятся</span></h1>
+    <p class="hero__sub">Производство и поставка корпусной мебели для детских садов, школ, офисов и дома. Полный цикл — от замера до монтажа. Работаем по всей России.</p>
+    <div class="hero__btns">
+      <a href="#contact" class="btn btn--primary">Получить предложение</a>
+      <a href="#catalog" class="btn btn--outline">Смотреть каталог</a>
+    </div>
+    <div class="hero__stats">
+      <div class="hero__stat">
+        <strong>300+</strong>
+        <span>позиций в наличии</span>
+      </div>
+      <div class="hero__stat">
+        <strong>250+</strong>
+        <span>оснащённых объектов</span>
+      </div>
+      <div class="hero__stat">
+        <strong>29</strong>
+        <span>городов России</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about section" id="about">
+  <div class="container">
+    <div class="about__grid">
+      <div class="about__image-wrap">
+        <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=700&q=80" alt="Производство мебели Лайт Стайл" class="about__image" loading="lazy" />
+        <div class="about__badge">
+          <strong>12 мес.</strong>
+          <span>гарантия на всю продукцию</span>
+        </div>
+      </div>
+      <div class="about__text">
+        <p class="section__label">О компании</p>
+        <h2 class="section__title">Лайт Стайл — российский производитель корпусной мебели</h2>
+        <p>Мы специализируемся на производстве корпусной мебели для детских садов, школ, офисов и коммерческих помещений. Каждый проект разрабатывается с учётом особенностей объекта, требований ГОСТ и СанПиН, пожеланий заказчика и бюджета.</p>
+        <p>Собственное производство позволяет нам держать цены ниже рыночных и выдерживать даже самые жёсткие сроки. Мы сопровождаем заказ на всех этапах — от замера и проектирования до производства, доставки и монтажа.</p>
+        <ul class="about__list">
+          <li><span class="check">✓</span> Собственное производство в России</li>
+          <li><span class="check">✓</span> Соответствие ГОСТ и СанПиН</li>
+          <li><span class="check">✓</span> Работа под любой бюджет</li>
+          <li><span class="check">✓</span> Полный цикл: проект → производство → монтаж</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CATALOG -->
+<section class="catalog section" id="catalog">
+  <div class="container">
+    <p class="section__label center">Каталог</p>
+    <h2 class="section__title center">Корпусная мебель для детских садов и школ</h2>
+    <p class="section__sub center">Цена рассчитывается индивидуально под каждый проект — напишите нам, и мы подготовим спецификацию и смету</p>
+
+    <div class="tabs">
+      <button class="tab tab--active" data-tab="kindergarten">Детские сады</button>
+      <button class="tab" data-tab="school">Школы</button>
+      <button class="tab" data-tab="office">Офисы и коммерция</button>
+    </div>
+
+    <div class="catalog__grid" id="tab-kindergarten">
+      <div class="card">
+        <div class="card__img" style="background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&q=70')"></div>
+        <div class="card__body">
+          <h3>Кровати и спальные места</h3>
+          <p>Детские кровати, двухъярусные конструкции, складные кровати-трансформеры. Экологичные материалы, закруглённые углы.</p>
+          <a href="#contact" class="btn btn--sm">Узнать цену</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__img" style="background-image:url('https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=500&q=70')"></div>
+        <div class="card__body">
+          <h3>Шкафы и стеллажи</h3>
+          <p>Шкафы для хранения, стеллажи для пособий и игрушек, детские стенки. Яркие цвета, безопасная фурнитура.</p>
+          <a href="#contact" class="btn btn--sm">Узнать цену</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__img" style="background-image:url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=500&q=70')"></div>
+        <div class="card__body">
+          <h3>Столы и стулья</h3>
+          <p>Регулируемые по высоте столы и стулья, групповые комплекты для занятий. Соответствие СанПиН по ростовым группам.</p>
+          <a href="#contact" class="btn btn--sm">Узнать цену</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__img" style="background-image:url('https://images.unsplash.com/photo-1590422749897-47036da0b0ff?w=500&q=70')"></div>
+        <div class="card__body">
+          <h3>Тумбочки и скамейки</h3>
+          <p>Прикроватные тумбочки, скамейки для раздевалок с крючками. Прочные, удобные, рассчитаны на интенсивную эксплуатацию.</p>
+          <a href="#contact" class="btn btn--sm">Узнать цену</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__img" style="background-image:url('https://images.unsplash.com/photo-1604079628040-94301bb21b91?w=500&q=70')"></div>
+        <div class="card__body">
+          <h3>Хозяйственный блок</h3>
+          <p>Шкафы для хозинвентаря, комплекты мебели для кухни и прачечной. Практично, гигиенично, долговечно.</p>
+          <a href="#contact" class="btn btn--sm">Узнать цену</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__img" style="background-image:url('https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=500&q=70')"></div>
+        <div class="card__body">
+          <h3>Прихожие и раздевалки</h3>
+          <p>Секционные шкафчики для детской одежды с именными табличками, скамьи, вешалки. Удобно для детей и персонала.</p>
+          <a href="#contact" class="btn btn--sm">Узнать цену</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="catalog__grid hidden" id="tab-school">
+      <div class="card">
+        <div class="card__img" style="background-image:url('https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=500&q=70')"></div>
+        <div class="card__body">
+          <h3>Ученические парты и стулья</h3>
+          <p>Одноместные и двуместные парты, регулируемые по высоте. Наклон столешницы, крючок для сумки, вместительная полка.</p>
+          <a href="#contact" class="btn btn--sm">Узнать цену</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__img" style="background-image:url('https://images.unsplash.com/photo-1562774053-701939374585?w=500&q=70')"></div>
+        <div class="card__body">
+          <h3>Шкафы для классов</h3>
+          <p>Встроенные и отдельностоящие шкафы для учебных материалов, книг, пособий. Стеклянные и глухие фасады.</p>
+          <a href="#contact" class="btn btn--sm">Узнать цену</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__img" style="background-image:url('https://images.unsplash.com/photo-1588072432836-e10032774350?w=500&q=70')"></div>
+        <div class="card__body">
+          <h3>Стеллажи и системы хранения</h3>
+          <p>Библиотечные стеллажи, модульные системы хранения, выставочные стойки. Максимальное использование пространства.</p>
+          <a href="#contact" class="btn btn--sm">Узнать цену</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__img" style="background-image:url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=500&q=70')"></div>
+        <div class="card__body">
+          <h3>Мебель для учительской</h3>
+          <p>Учительские столы, стулья, тумбы, шкафы для документов. Эргономичный дизайн для рабочего пространства педагога.</p>
+          <a href="#contact" class="btn btn--sm">Узнать цену</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__img" style="background-image:url('https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?w=500&q=70')"></div>
+        <div class="card__body">
+          <h3>Скамейки и раздевалки</h3>
+          <p>Секционные шкафчики для раздевалок, скамейки в коридоры. Прочные металлические и деревянные конструкции.</p>
+          <a href="#contact" class="btn btn--sm">Узнать цену</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__img" style="background-image:url('https://images.unsplash.com/photo-1571624436279-b272aff752b5?w=500&q=70')"></div>
+        <div class="card__body">
+          <h3>Столовая и буфет</h3>
+          <p>Обеденные столы, стулья, барные стойки для школьных столовых. Лёгкая уборка, ударостойкие покрытия.</p>
+          <a href="#contact" class="btn btn--sm">Узнать цену</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="catalog__grid hidden" id="tab-office">
+      <div class="card">
+        <div class="card__img" style="background-image:url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=500&q=70')"></div>
+        <div class="card__body">
+          <h3>Офисные рабочие места</h3>
+          <p>Эргономичные рабочие столы, тумбы, системы хранения. Модульные решения для оперативного офиса любого масштаба.</p>
+          <a href="#contact" class="btn btn--sm">Узнать цену</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__img" style="background-image:url('https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=500&q=70')"></div>
+        <div class="card__body">
+          <h3>Переговорные комнаты</h3>
+          <p>Конференц-столы, кресла, тумбы и стеллажи для переговорных. Строгий дизайн, качественные покрытия.</p>
+          <a href="#contact" class="btn btn--sm">Узнать цену</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__img" style="background-image:url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=500&q=70')"></div>
+        <div class="card__body">
+          <h3>Шкафы и архивы</h3>
+          <p>Архивные шкафы, стеллажи для документов, системы папок. Металлические и ДСП конструкции с замками.</p>
+          <a href="#contact" class="btn btn--sm">Узнать цену</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__img" style="background-image:url('https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=500&q=70')"></div>
+        <div class="card__body">
+          <h3>Мебель для дома</h3>
+          <p>Кухни, шкафы, гардеробные, прихожие, мебель для гостиных. Индивидуальные проекты под любое помещение.</p>
+          <a href="#contact" class="btn btn--sm">Узнать цену</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="catalog__cta">
+      <p>Не нашли нужную позицию? Мы изготовим любую мебель на заказ</p>
+      <a href="#contact" class="btn btn--primary">Обсудить проект</a>
+    </div>
+  </div>
+</section>
+
+<!-- ADVANTAGES -->
+<section class="advantages section" id="advantages">
+  <div class="container">
+    <p class="section__label center">Почему выбирают нас</p>
+    <h2 class="section__title center">Преимущества Лайт Стайл</h2>
+    <div class="adv__grid">
+      <div class="adv__card">
+        <div class="adv__icon">🏭</div>
+        <h3>Собственное производство</h3>
+        <p>Изготавливаем мебель на собственных мощностях — без посредников. Это позволяет держать цены ниже рыночных и контролировать качество на каждом этапе.</p>
+      </div>
+      <div class="adv__card">
+        <div class="adv__icon">⚡</div>
+        <h3>Горящие сроки</h3>
+        <p>Работаем с самыми жёсткими дедлайнами. Опыт реализации срочных проектов — наше конкурентное преимущество. Чем раньше обратитесь, тем быстрее получите результат.</p>
+      </div>
+      <div class="adv__card">
+        <div class="adv__icon">💼</div>
+        <h3>Любой бюджет</h3>
+        <p>Подбираем оптимальные решения как для крупных госзакупок, так и для небольших частных заказов. Работаем с юрлицами и физлицами по всей России.</p>
+      </div>
+      <div class="adv__card">
+        <div class="adv__icon">📐</div>
+        <h3>Полный цикл</h3>
+        <p>От замера и разработки проекта до изготовления, доставки и монтажа. Подготавливаем спецификацию, проходим экспертизу, предоставляем всю документацию.</p>
+      </div>
+      <div class="adv__card">
+        <div class="adv__icon">✅</div>
+        <h3>Соответствие стандартам</h3>
+        <p>Продукция изготавливается из экологичных и гипоаллергенных материалов. Соответствие актуальным требованиям ГОСТ и СанПиН для образовательных учреждений.</p>
+      </div>
+      <div class="adv__card">
+        <div class="adv__icon">🔧</div>
+        <h3>Профессиональный монтаж</h3>
+        <p>Монтажники с опытом 7+ лет. При необходимости корректируем размеры прямо на объекте. Сдаём «под ключ» с гарантией 12 месяцев.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process section" id="process">
+  <div class="container">
+    <p class="section__label center">Как мы работаем</p>
+    <h2 class="section__title center">Этапы сотрудничества</h2>
+    <div class="process__steps">
+      <div class="process__step">
+        <div class="process__num">01</div>
+        <div class="process__body">
+          <h3>Заявка и консультация</h3>
+          <p>Оставьте заявку на сайте или напишите на почту. Мы свяжемся с вами, уточним требования к проекту, сроки и бюджет.</p>
+        </div>
+      </div>
+      <div class="process__step">
+        <div class="process__num">02</div>
+        <div class="process__body">
+          <h3>Замер и проектирование</h3>
+          <p>Выезжаем на объект, снимаем замеры. Разрабатываем проект с учётом особенностей помещения, функциональных требований и нормативов.</p>
+        </div>
+      </div>
+      <div class="process__step">
+        <div class="process__num">03</div>
+        <div class="process__body">
+          <h3>Спецификация и смета</h3>
+          <p>Подготавливаем полный пакет документов: спецификацию, смету, при необходимости проходим экспертизу. Предлагаем оптимальные цены.</p>
+        </div>
+      </div>
+      <div class="process__step">
+        <div class="process__num">04</div>
+        <div class="process__body">
+          <h3>Производство</h3>
+          <p>Изготавливаем мебель на собственном производстве с применением высокоточного оборудования. Контроль качества на каждом этапе.</p>
+        </div>
+      </div>
+      <div class="process__step">
+        <div class="process__num">05</div>
+        <div class="process__body">
+          <h3>Доставка и монтаж</h3>
+          <p>Организуем логистику по всей России. Профессиональная сборка и установка на объекте, пусконаладка, уборка после монтажа.</p>
+        </div>
+      </div>
+      <div class="process__step">
+        <div class="process__num">06</div>
+        <div class="process__body">
+          <h3>Гарантия и поддержка</h3>
+          <p>Гарантия 12 месяцев на всю продукцию. После сдачи объекта остаёмся на связи и решаем возникающие вопросы.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OFFER BANNER -->
+<section class="banner">
+  <div class="container banner__inner">
+    <div class="banner__text">
+      <h2>Поставка оборудования под любой бюджет</h2>
+      <p>Пришлите техническое задание или список позиций — мы рассчитаем стоимость и предложим оптимальное решение в течение одного рабочего дня.</p>
+    </div>
+    <a href="#contact" class="btn btn--white">Получить расчёт</a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact section" id="contact">
+  <div class="container">
+    <p class="section__label center">Связаться с нами</p>
+    <h2 class="section__title center">Оставить заявку</h2>
+    <p class="section__sub center">Опишите ваш проект, и мы свяжемся с вами для бесплатной консультации и расчёта стоимости</p>
+
+    <div class="contact__grid">
+      <form class="form" id="contactForm" novalidate>
+        <div class="form__row">
+          <div class="form__field">
+            <label for="name">Ваше имя *</label>
+            <input type="text" id="name" name="name" placeholder="Иван Иванов" required />
+          </div>
+          <div class="form__field">
+            <label for="org">Организация</label>
+            <input type="text" id="org" name="org" placeholder="МБДОУ №45" />
+          </div>
+        </div>
+        <div class="form__row">
+          <div class="form__field">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" placeholder="mail@example.ru" required />
+          </div>
+          <div class="form__field">
+            <label for="city">Город</label>
+            <input type="text" id="city" name="city" placeholder="Москва" />
+          </div>
+        </div>
+        <div class="form__field">
+          <label for="message">Описание проекта *</label>
+          <textarea id="message" name="message" rows="5" placeholder="Расскажите о вашем проекте: что нужно, сроки, примерный бюджет..." required></textarea>
+        </div>
+        <div class="form__checkbox">
+          <input type="checkbox" id="privacy" name="privacy" required />
+          <label for="privacy">Я согласен(а) с <a href="privacy.html" target="_blank">политикой конфиденциальности</a> и даю согласие на обработку персональных данных</label>
+        </div>
+        <button type="submit" class="btn btn--primary btn--full">Отправить заявку</button>
+        <div class="form__success hidden" id="formSuccess">
+          <span>✓</span> Спасибо! Мы получили вашу заявку и свяжемся с вами в ближайшее время.
+        </div>
+        <div class="form__error hidden" id="formError">
+          Ошибка отправки. Напишите нам напрямую: <a href="mailto:lightstylemeb@yandex.ru">lightstylemeb@yandex.ru</a>
+        </div>
+      </form>
+
+      <div class="contact__info">
+        <div class="contact__block">
+          <h3>Контакты</h3>
+          <p><strong>Email:</strong><br/><a href="mailto:lightstylemeb@yandex.ru">lightstylemeb@yandex.ru</a></p>
+          <p><strong>Телефон:</strong><br/><a href="tel:+79261692970">+7 926 169-29-70</a></p>
+          <p><strong>Режим работы:</strong><br/>Пн–Пт, 9:00–18:00</p>
+          <p><strong>Поставка:</strong><br/>По всей России</p>
+        </div>
+        <div class="contact__block">
+          <h3>Реквизиты</h3>
+          <p><strong>ИП Терентьев Дмитрий Петрович</strong></p>
+          <p>ИНН: 330800575196</p>
+          <p>ОГРН: 324508100016827</p>
+          <p>Юр. адрес: 143441, Московская обл., г. Красногорск</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <a href="#top" class="logo">
+        <span class="logo__light">Лайт</span><span class="logo__dark">Стайл</span>
+      </a>
+      <p>Корпусная мебель для детских садов, школ, офисов и дома. Производство и поставка по всей России.</p>
+    </div>
+    <div class="footer__links">
+      <h4>Навигация</h4>
+      <a href="#about">О компании</a>
+      <a href="#catalog">Каталог</a>
+      <a href="#advantages">Преимущества</a>
+      <a href="#process">Этапы работы</a>
+      <a href="#contact">Контакты</a>
+    </div>
+    <div class="footer__links">
+      <h4>Категории</h4>
+      <a href="#catalog">Детские сады</a>
+      <a href="#catalog">Школы</a>
+      <a href="#catalog">Офисы</a>
+      <a href="#catalog">Дом</a>
+    </div>
+    <div class="footer__contact">
+      <h4>Контакты</h4>
+      <a href="mailto:lightstylemeb@yandex.ru">lightstylemeb@yandex.ru</a>
+      <a href="tel:+79261692970">+7 926 169-29-70</a>
+      <p class="footer__small">ИП Терентьев Д.П. · ИНН 330800575196</p>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="container">
+      <span>© 2024 Лайт Стайл. Все права защищены.</span>
+      <a href="privacy.html">Политика конфиденциальности</a>
+    </div>
+  </div>
+</footer>
+
+<a href="#top" class="back-top" id="backTop" aria-label="Наверх">↑</a>
+
+<script src="main.js"></script>
+</body>
+</html>
