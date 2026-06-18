@@ -191,8 +191,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .hero__bg {
   position: absolute;
   inset: 0;
-  background:
-    url('https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1800&q=80') center/cover no-repeat;
+  background: url('images/hero.jpg') center/cover no-repeat;
 }
 
 .hero__overlay {
@@ -449,19 +448,20 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .adv__icon {
-  width: 52px;
-  height: 52px;
-  margin-bottom: 18px;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: rgba(37,99,235,.08);
-  border-radius: 12px;
-  padding: 10px;
+  border-radius: 9px;
+  padding: 8px;
+  flex-shrink: 0;
 }
 .adv__icon svg {
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
   display: block;
 }
 
