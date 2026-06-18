@@ -48,7 +48,7 @@ if (phoneInput) {
 // Contact form
 const form = document.getElementById('contactForm');
 if (form) {
-  form.addEventListener('submit', async (e) => {
+  form.addEventListener('submit', (e) => {
     e.preventDefault();
 
     // Validate required fields
@@ -68,28 +68,11 @@ if (form) {
     const email   = form.querySelector('#email').value.trim();
     const message = form.querySelector('#message').value.trim();
 
-    // Try FormSubmit.co (free static form service)
-    let sent = false;
-    try {
-      const res = await fetch('https://formsubmit.co/ajax/lightstylemeb@yandex.ru', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify({
-          name, phone, email, message,
-          _subject: `Заявка с сайта — ${name}`,
-          _captcha: 'false'
-        })
-      });
-      const data = await res.json();
-      if (data.success === 'true' || data.success === true) sent = true;
-    } catch (_) { /* fallback */ }
-
-    if (!sent) {
-      // Fallback: open mailto
-      const body = encodeURIComponent(`Имя: ${name}\nТелефон: ${phone}\nEmail: ${email}\n\nПроект:\n${message}`);
-      const subject = encodeURIComponent(`Заявка с сайта — ${name}`);
-      window.location.href = `mailto:lightstylemeb@yandex.ru?subject=${subject}&body=${body}`;
-    }
+    // Open mailto synchronously (must be in direct user-gesture handler, before any await)
+    const bodyText = `Имя: ${name}\nТелефон: ${phone}\nEmail: ${email}${message ? '\n\nПроект:\n' + message : ''}`;
+    const subject  = encodeURIComponent(`Заявка с сайта — ${name}`);
+    const body     = encodeURIComponent(bodyText);
+    window.location.href = `mailto:lightstylemeb@yandex.ru?subject=${subject}&body=${body}`;
 
     showSuccess();
   });
