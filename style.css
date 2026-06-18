@@ -122,13 +122,17 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 100;
-  background: rgba(255,255,255,.95);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border);
-  transition: box-shadow var(--transition);
+  background: rgba(255,255,255,.55);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(255,255,255,.3);
+  transition: background var(--transition), box-shadow var(--transition);
 }
 
-.header.scrolled { box-shadow: var(--shadow); }
+.header.scrolled {
+  background: rgba(255,255,255,.82);
+  box-shadow: var(--shadow);
+}
 
 .header__inner {
   display: flex;
