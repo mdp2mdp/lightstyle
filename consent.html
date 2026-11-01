@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Согласие на обработку персональных данных — Лайт Стайл</title>
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <title>Согласие на обработку персональных данных — Laitel</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <style>
     .doc-page { padding: 120px 0 80px; min-height: 100vh; }
@@ -17,13 +18,13 @@
     .doc-page p, .doc-page li { color: var(--gray); line-height: 1.75; margin-bottom: 10px; font-size: .9375rem; }
     .doc-page ul { padding-left: 20px; list-style: disc; }
     .doc-page ol { padding-left: 20px; }
-    .doc-page a { color: var(--primary); }
+    .doc-page a { color: var(--color-accent-text); text-decoration: underline; }
     .doc-page strong { color: var(--dark); }
-    .back-link { display: inline-flex; align-items: center; gap: 8px; color: var(--primary); font-weight: 500; margin-bottom: 32px; }
+    .back-link { display: inline-flex; align-items: center; gap: 8px; color: var(--color-accent-text); font-weight: 500; margin-bottom: 32px; text-decoration: none !important; }
     .back-link:hover { text-decoration: underline; }
     .consent-box {
       background: var(--gray-light);
-      border-left: 4px solid var(--primary);
+      border-left: 4px solid var(--beige-500);
       padding: 20px 24px;
       border-radius: 0 8px 8px 0;
       margin: 24px 0;
@@ -35,8 +36,8 @@
 <body>
 <header class="header">
   <div class="container header__inner">
-    <a href="index.html" class="logo">
-      <span class="logo__light">Лайт</span><span class="logo__dark">Стайл</span>
+    <a href="index.html" class="logo" aria-label="Laitel — на главную">
+      <img src="images/laitel-logo-dark.png" alt="Laitel" width="124" height="36" />
     </a>
   </div>
 </header>
@@ -142,7 +143,7 @@
   </div>
   <div class="footer__bottom">
     <div class="container">
-      <span>© 2026 Лайт Стайл. Все права защищены.</span>
+      <span>© 2026 Laitel. Все права защищены.</span>
       <div class="footer__bottom-links">
         <a href="privacy.html">Политика конфиденциальности</a>
         <a href="consent.html">Согласие на обработку данных</a>
