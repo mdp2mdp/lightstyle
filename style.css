@@ -420,10 +420,27 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
 
 .card__img {
-  height: 220px;
-  background-size: cover;
-  background-position: center;
+  position: relative;
+  aspect-ratio: 5 / 4;
+  overflow: hidden;
   flex-shrink: 0;
+  background: var(--beige-100);
+}
+/* Фото любой пропорции показываем целиком; пустые поля заполняет размытая копия того же снимка */
+.card__img::before,
+.card__img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--img) center / cover no-repeat;
+}
+.card__img::before {
+  inset: -24px;
+  filter: blur(22px) saturate(.9);
+  opacity: .85;
+}
+.card__img::after {
+  background-size: contain;
 }
 
 .card__body {
